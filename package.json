@@ -1,0 +1,15 @@
+{
+  "name": "wikipedia-plugin",
+  "version": "1.0.0",
+  "description": "A plugin that enables access to the Wikipedia API to search for academic papers.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "html-to-text": "^9.0.5",
+    "wikipedia-js": "^0.0.6"
+  }
+}

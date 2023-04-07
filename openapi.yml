@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: Wikipedia Search API
+  description: An API for searching Wikipedia articles using the wikipedia-js library.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /search:
+    get:
+      summary: Search Wikipedia articles
+      operationId: searchArticles
+      description: Retrieve the summary of a Wikipedia article based on the provided search query.
+      parameters:
+        - name: query
+          in: query
+          description: The search query for the Wikipedia article.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response containing the summary of the Wikipedia article.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  summary:
+                    type: string
+                    description: The summary of the Wikipedia article in plain text format.
+        '400':
+          description: Bad request (e.g., missing query parameter).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+        '500':
+          description: Internal server error (e.g., an error occurred while searching for the article).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.

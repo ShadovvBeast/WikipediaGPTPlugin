@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Wikipedia Search Plugin",
+  "name_for_model": "wikipedia",
+  "description_for_human": "Plugin for searching articles on Wikipedia. You can search for articles based on a query.",
+  "description_for_model": "Plugin for searching articles on Wikipedia. You can search for articles based on a query.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:3000/openapi.yml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png",
+  "contact_email": "ShadovvBeast@gmail.com",
+  "legal_info_url": "http://localhost:3000/legal_info.html"
+}
